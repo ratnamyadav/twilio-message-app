@@ -1,0 +1,2 @@
+class TwilioBook < ApplicationRecord
+end

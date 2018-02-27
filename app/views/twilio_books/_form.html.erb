@@ -1,0 +1,27 @@
+<%= form_with(model: twilio_book, local: true) do |form| %>
+  <% if twilio_book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(twilio_book.errors.count, "error") %> prohibited this twilio_book from being saved:</h2>
+
+      <ul>
+      <% twilio_book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :message_name %>
+    <%= form.text_field :message_name, id: :twilio_book_message_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message_description %>
+    <%= form.text_area :message_description, id: :twilio_book_message_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

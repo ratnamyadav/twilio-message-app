@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message name:</strong>
+  <%= @twilio_book.message_name %>
+</p>
+
+<p>
+  <strong>Message description:</strong>
+  <%= @twilio_book.message_description %>
+</p>
+
+<%= link_to 'Edit', edit_twilio_book_path(@twilio_book) %> |
+<%= link_to 'Back', twilio_books_path %>
